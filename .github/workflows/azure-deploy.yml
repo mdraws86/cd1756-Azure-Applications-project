@@ -17,15 +17,15 @@ jobs:
         with:
          python-version: '3.11'
 
-      - name: Create and start virtual environment
-        run:
-         python -m venv venv
+      - name: Create virtual environment
+        run: python -m venv venv
          . venv/bin/activate
 
       - name: Install dependencies
         run:
-         pip install --upgrade pip
-         pip install -r requirements.txt
+          . venv/biin/activate
+          pip install --upgrade pip
+          pip install -r requirements.txt
 
   deploy:
     runs-on: ubuntu-latest
